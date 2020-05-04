@@ -5,3 +5,4 @@ applications:
   - https://github.com/cloudfoundry/python-buildpack.git
   command: python app.py
   random-route: true
+  timeout: 180
