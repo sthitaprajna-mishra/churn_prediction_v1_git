@@ -15,7 +15,7 @@ from model import credentials, re_values, re_labels, firstChartOne, firstChartTw
 
 app = Flask(__name__)
 
-flask = 0
+flag = 0
 
 newUrl = ""
 csvName = ""
