@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+	<title>Home Page</title>
+</head>
+
+<style>
+
+body{
+	background-image: url('static/img/bg5.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.w3-allerta {
+    font-family: "Allerta Stencil", Sans-serif;
+	font-size: 45px;
+	font-weight: bold;  
+    position: fixed;
+    top: 13%;
+    left: 60%;
+    color: white; 	
+}
+
+.but {
+    height: 200px;
+    width: 400px;
+
+    position: fixed;
+    top: 55%;
+    left: 60%;
+}
+
+.button4, .button5{
+  background-color: white;
+  color: #555555;
+  border: 2px solid #555555;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Book Antiqua, Sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10%;
+  width: 12em;
+}
+
+.button4:hover, .button5:hover {
+	background-color: #555555;
+	color: white;
+}
+
+.button4:hover:after {
+	content: "(accessible by all)";
+}
+
+.button4:hover span, .button5:hover span{
+	display: none;
+}
+
+.button5:hover:after {
+	content: "(accessible by db admin only)";
+}
+
+.desc {
+	color: white;
+	font-size: 16px;
+	background-color: black;
+	opacity: 90%;
+	height: 80%;
+	width: 30%;
+	top: 10%;
+	left: 13%;
+	position: fixed;
+	padding: 15px 15px;
+	overflow-y: scroll;
+	border-radius: 3%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333333; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+  background: white;
+}
+
+.quest{
+	font-family: Verdana;
+	font-size: 20px;
+}
+
+.ans{
+	font-family: Calibri;
+	font-size: 14px;
+}
+
+</style>
+<body>
+
+<div class = "desc">
+	
+		<span class = "quest">What is customer churn?</span>
+		<p class = "ans">
+		Customer churn (or customer attrition) is a tendency of customers to abandon a brand and stop being a paying client of a particular business. The percentage of customers that discontinue using a company’s products or services during a particular time period is called a customer churn (attrition) rate. One of the ways to calculate a churn rate is to divide the number of customers lost during a given time interval by the number of acquired customers, and then multiply that number by 100 percent. For example, if you got 150 customers and lost three last month, then your monthly churn rate is 2 percent.
+		</p>
+		<br><br>
+		<span class = "quest">What is the impact of customer churn on business?</span>
+		<p class = "ans">
+		Well, churn is bad. But how exactly does it affect company performance in the long run? In a subscription-based business, even a small rate of monthly/quarterly churn will compound quickly over time. Just 1 percent monthly churn translates to almost 12 percent yearly churn. Given that it’s far more expensive to acquire a new customer than to retain an existing one, businesses with high churn rates will quickly find themselves in a financial hole as they have to devote more and more resources to new customer acquisition.<br><br>Companies with high churn rates aren’t only failing to deliver in their relationships with ex-customers but also damage their future acquisition efforts by creating negative word-of-mouth around their products.
+		</p>
+		<br><br>
+		<span class = "quest">How does ML help in detecting customer churn?</span>
+		<p class = "ans">
+		As to identifying potential churners, machine learning algorithms can do a great job here. They reveal some shared behavior patterns of those customers who have already left the company. Then, ML algorithms check the behavior of current customers against such patterns and signal if they discover potential churners.<br><br>ML-based software allows customer success managers to define which customers they should contact. In other words, employees can be sure they’re speaking with the right customers at the right time. Sales, customer success, and marketing teams can also use the knowledge from the data analysis to align their actions. For example, if a customer is showing signs of churn risk, that’s probably not a great time for sales to reach out with information about additional services the customer might be interested in. Rather, that engagement should be with the CSM so they can help the customer become re-engaged and see value in the products they currently have.
+		</p>
+</div>
+
+<div class="w3-allerta">
+  <p>Customer Churn Prediction Model</p>
+</div>
+
+<div class = "but">
+	<a href="{{ url_for('index') }}"><button class = "button4"><span>Predict <br> customer <br> churn<br></span></button></a>
+	
+	<a href="{{ url_for('login') }}"><button class = "button5"><span>Upload <br> new <br> dataset<br></span></button></a>
+</div>
+
+</body>
+</html>

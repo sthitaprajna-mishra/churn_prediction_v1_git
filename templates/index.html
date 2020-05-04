@@ -1,0 +1,146 @@
+<html> 
+<title>Form</title>
+<style>
+
+span.required {
+    margin-left: 0;
+    color: red;
+}
+
+form{
+	font-family: Roboto, Arial, sans-serif;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  margin: 50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.model_heading{
+	font-family: Calibri;
+	font-size: 22px;
+}
+
+.model_desc{
+	font-family: Calibri;
+	font-size: 16px;
+}
+
+.button4 {
+  background-color: #555555;
+  color: white;
+  border: 2px solid #555555;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 7%;
+}
+
+.button4:hover {
+	background-color: white;
+	color: #555555;
+}
+
+</style>
+<body> 
+	<p class = "model_heading">Model trained on: </p>
+	{% if flag == 0 %}
+		<p class = "model_desc">Developer's sample dataset. In order to correctly predict your company's customer churn, it is recommended to instead train this model on your original dataset and incorporate suitable changes in the features.</p> 
+	{% else %}
+		<p class = "model_desc">User's custom dataset. The prediction model has been trained on the data uploaded by the user.</p> 
+	{% endif %}	
+
+	<p class = "model_heading">Want to train your own dataset?</p>
+	<a href="{{ url_for('login') }}"><button class = "button4">Yes</button></a>
+	
+<div> 
+	
+	
+
+<form action="/result" method="POST"> 
+
+	<h2><center><u>Bank's Customer Churn Prediction Model</u></center></h2><br>
+	<br>
+	<label for="age">Age</label><span class="required">*</span>
+	<input type="text" id="age" name="age" required> 
+	<br><br>
+	<label for="c_score">Credit Score</label><span class="required">*</span>
+	<input type="text" id="c_score" name="c_score" required> 
+	<br><br> 
+	<label for="tenure">Tenure (refers to the number of years that the customer has been a client of the bank)</label><span class="required">*</span>
+	<input type="text" id="tenure" name="tenure" required> 
+	<br><br>
+	<label for="balance">Balance</label><span class="required">*</span>
+	<input type="text" id="balance" name="balance" required> 
+	<br><br>
+	<label for="num_of_products">Number of Products (refers to the number of products that a customer has purchased through the bank)</label><span class="required">*</span>
+	<input type="text" id="num_of_products" name="num_of_products"> 
+	<br><br>
+	<label for="estimated_sal">Estimated Salary</label><span class="required">*</span>
+	<input type="text" id="estimated_sal" name="estimated_sal"> 
+	<br><br>
+	<label for="geo">Geography</label><span class="required">*</span>
+	<select id="geo" name="geo"> 
+	<option value="0">France</option> 
+	<option value="1">Germany</option> 
+	<option value="2">Spain</option> 
+	</select> 
+	<br><br> 
+	<label for="gender">Gender</label><span class="required">*</span>
+	<select id="gender" name="gender"> 
+	<option value="0">Female</option> 
+	<option value="1">Male</option> 
+	</select> 
+	<br><br> 
+	<label for="cred">Has Credit Card</label><span class="required">*</span> 
+	<select id="cred" name="cred"> 
+	<option value="0">No</option> 
+	<option value="1">Yes</option> 
+	</select> 
+	<br><br> 
+	<label for="mem">Is Active Member</label><span class="required">*</span> 
+	<select id="mem" name="mem"> 
+	<option value="0">No</option> 
+	<option value="1">Yes</option>  
+	</select> 
+	<br><br> 
+	<input type="submit" value="Submit">
+	<br>
+	<br>
+</form> 
+</div> 
+</body> 
+</html> 

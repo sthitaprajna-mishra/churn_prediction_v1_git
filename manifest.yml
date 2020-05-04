@@ -1,0 +1,7 @@
+applications:
+- name: churn_stage_one
+  memory: 25M
+  buildpacks: 
+  - https://github.com/cloudfoundry/python-buildpack.git
+  command: python app.py
+  random-route: true

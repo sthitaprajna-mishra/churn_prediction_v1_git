@@ -1,0 +1,42 @@
+<!doctype html>
+<title>Upload new dataset</title>
+<style>
+
+.model_heading{
+	font-family: Calibri;
+	font-size: 22px;
+}
+
+.button4 {
+  background-color: #555555;
+  color: white;
+  border: 2px solid #555555;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 7%;
+}
+
+.button4:hover {
+	background-color: white;
+	color: #555555;
+}
+
+</style>
+<h2 class = "model_heading">Upload new dataset</h2>
+
+<form method="post" action="/upload">
+	<label for = "newUrl">Enter csv file url:</label>
+	<input type = "text" name = "newUrl" placeholder="https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv"><br>
+	<label for = "csvName">Enter csv file name:</label>
+	<input type = "text" name = "csvName" placeholder="newFile.csv"><br>
+	<p>
+		<input class = "button4" type="submit" value="Upload">
+	</p>
+</form>
