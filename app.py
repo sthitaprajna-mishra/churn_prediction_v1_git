@@ -8,7 +8,7 @@ from model import classifier as loaded_model
 
 import os
 
-port = int(os.getenv("VCAP_APP_PORT"))
+port = int(os.getenv("PORT"))
 
 from model import credentials, re_values, re_labels, firstChartOne, firstChartTwo, secChartOne, secChartTwo, exitedAgeValues, exitedAgeLabels
 
