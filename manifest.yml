@@ -1,8 +1,6 @@
 applications:
 - name: churn_stage_one
-  memory: 150M
-  buildpacks: 
-  - https://github.com/cloudfoundry/python-buildpack.git
+  memory: 256M
   command: python app.py
   random-route: true
   timeout: 180
