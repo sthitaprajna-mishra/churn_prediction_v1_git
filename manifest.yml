@@ -1,5 +1,5 @@
 applications:
-- name: churn_stage_one
+- name: mychurnappthree
   memory: 150M
   command: python app.py
   random-route: true
