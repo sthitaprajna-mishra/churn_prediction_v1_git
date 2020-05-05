@@ -1,6 +1,6 @@
 applications:
 - name: churn_stage_one
-  memory: 150M
+  memory: 128M
   command: python app.py
   random-route: true
   timeout: 180
