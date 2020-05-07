@@ -11,7 +11,18 @@ import pandas as pd
 bucket_name = 'cc-tutorial3600'
 
 credentials = {
- }
+  "apikey": "fmGUbUIc0D-mapvFqZ7yWQfrPmKpOgg6OhPVxDHEAiIg",
+  "cos_hmac_keys": {
+    "access_key_id": "492135d6f4a744af96902262d7db9424",
+    "secret_access_key": "c6e981069885ca4a5510dd83db43ae30ce5ff01ec6f9602d"
+  },
+  "endpoints": "https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints",
+  "iam_apikey_description": "Auto-generated for key 492135d6-f4a7-44af-9690-2262d7db9424",
+  "iam_apikey_name": "credentials-2",
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/684614a85ea348afb68af9b593f6ffae::serviceid:ServiceId-0002ae54-7188-4c1d-854b-3f6dc7c4621e",
+  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/684614a85ea348afb68af9b593f6ffae:6697f92a-c200-4ecd-87ed-41b92851a890::"
+}
 
 import ibm_boto3
 
