@@ -11,7 +11,7 @@ import pandas as pd
 bucket_name = 'cc-tutorial3600'
 
 credentials = {
-  #"insert your own crdentials"
+  #"insert your own credentials"
 }
 
 import ibm_boto3
