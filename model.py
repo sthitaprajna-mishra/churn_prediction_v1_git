@@ -10,7 +10,9 @@ import pandas as pd
 
 bucket_name = 'cc-tutorial3600'
 
-credentials = {}
+credentials = {
+  #"insert your own crdentials"
+}
 
 import ibm_boto3
 
